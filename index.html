@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:Tomato;">
+<body style="background-color:AliceBlue;">
 
 
 <h1>Phillip's site of cool things!<h1>
-<p>This site is going to be used to show random stuff including interesting projects.</p>
+<p>This site is going to be used to display my interesting projects, such as programs I am planning create.</p>
 
+  
+  
+  
+  function startGame() {
+  myGamePiece = new component(30, 30, "red", 10, 120);
+  myGamePiece.gravity = 0.05;
+  myScore = new component("30px", "Consolas", "black", 280, 40, "text");
+  myGameArea.start();
+}
+
+var myGameArea = {
+  canvas : document.createElement("canvas"),
+  start : function() {
+    this.canvas.width = 480;
+    this.canvas.height = 270;
+    this.context = this.canvas.getContext("2d");
+    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    this.frameNo = 0;
+  },
+  clear : function() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
+} 
+  
 </body>
 </html>
